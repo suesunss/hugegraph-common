@@ -42,6 +42,7 @@ public class RestResult {
         this.status = response.getStatus();
         this.headers = response.getHeaders();
         this.content = response.readEntity(String.class);
+        response.close();
     }
 
     public int status() {
